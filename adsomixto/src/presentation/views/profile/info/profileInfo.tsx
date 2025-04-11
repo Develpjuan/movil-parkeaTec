@@ -62,7 +62,7 @@ export const ProfileInfoScreen = ({ navigation, route }: Props) => {
                     <Text style={styles.buttonText}>Cerrar Sesión</Text>
                 </TouchableOpacity>
             </View>
-                <Text style={styles.title}>Productos</Text>
+                <Text style={styles.title}>Usuarios</Text>
                 {/* <ScrollView></ScrollView> */}
                 <FlatList
                     data={products}
@@ -163,7 +163,7 @@ export const ProfileInfoScreen = ({ navigation, route }: Props) => {
             </View>
             
             <TouchableOpacity style={styles.addButton} onPress={selectedProductId ? handleUpdateProduct : handleAddProduct}>
-                <Text style={styles.addButtonText}>{selectedProductId ? "Modificar Producto" : "Crear Producto"}</Text>
+                <Text style={styles.addButtonText}>{selectedProductId ? "Editar Usuario" : "Crear Usuario"}</Text>
             </TouchableOpacity>
             <TextInput
                 style={styles.input}
@@ -173,11 +173,11 @@ export const ProfileInfoScreen = ({ navigation, route }: Props) => {
                 keyboardType="numeric"
             />
             <TouchableOpacity style={styles.searchButton} onPress={handleSearchProduct}>
-                <Text style={styles.searchButtonText}>Buscar Producto</Text>
+                <Text style={styles.searchButtonText}>Buscar Usuario</Text>
             </TouchableOpacity>
             {searchedProduct && (
                 <View style={styles.productContainer}>
-                    <Text style={styles.productText}> Producto Buscado: {searchedProduct.nombre} - {searchedProduct.correo_electronico}</Text>
+                    <Text style={styles.productText}> Usuario Buscado: {searchedProduct.nombre} - {searchedProduct.correo_electronico}</Text>
                 </View>
             )}
             <TouchableOpacity style={styles.reportButton} onPress={toggleModal}>
@@ -185,9 +185,9 @@ export const ProfileInfoScreen = ({ navigation, route }: Props) => {
             </TouchableOpacity>
             <Modal isVisible={isModalVisible}>
                 <View style={styles.modalContent}>
-                    <Text style={styles.modalTitle}>Reporte de Productos</Text>
+                    <Text style={styles.modalTitle}>Reporte de Usuarios</Text>
                     {products.map(product => (
-                        <Text key={product.id_documento} style={styles.modalText}>{product.nombre} - ${product.correo_electronico}</Text>
+                        <Text key={product.id_documento} style={styles.modalText}>{product.nombre} - {product.correo_electronico}</Text>
                     ))}
                     <TouchableOpacity onPress={toggleModal} style={styles.closeButton}>
                         <Text style={styles.closeButtonText}>Cerrar</Text>

@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   formTextInput:{
     flex: 1,
     borderBottomWidth: 1,
-    borderBottomColor: 'orange',
+    borderBottomColor: 'black',
     marginLeft: 15,
   }
 })

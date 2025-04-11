@@ -34,15 +34,15 @@ export const HomeScreen = ({ navigation, route }: Props) => {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../../../../assets/chef.jpg')}
+                source={require('../../../../assets/parkeatec_movil.png')}
                 style={styles.ImageBackground}
             />
             <View style={styles.logoContainer}>
                 <Image
-                    source={require('../../../../assets/logo.png')}
+                    source={require('../../../../assets/logo_movil.png')}
                     style={styles.logoImage}
                 />
-                <Text style={styles.logoText}>FOOD FGFERNAN</Text>
+                <Text style={styles.logoText}>ParkeaTec</Text>
             </View>
 
             <View style={styles.form}>

@@ -36,7 +36,7 @@ const profileStyles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     button: {
-        backgroundColor: '#2196F3',
+        backgroundColor: '#198754',
         padding: 10,
         borderRadius: 5,
         marginHorizontal: 5,
@@ -45,7 +45,7 @@ const profileStyles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         marginHorizontal: 5,
-        backgroundColor: 'red'
+        backgroundColor: '#dc3545'
     },
     buttonText: {
         color: 'white',
@@ -61,7 +61,7 @@ const profileStyles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     addButton: {
-        backgroundColor: '#4CAF50',
+        backgroundColor: '#198754',
         padding: 15,
         borderRadius: 5,
         alignItems: 'center',

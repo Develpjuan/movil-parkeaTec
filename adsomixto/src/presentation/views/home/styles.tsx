@@ -37,9 +37,9 @@ const homeStyles = StyleSheet.create({
 
     formRegisterText: {
         fontStyle: 'italic',
-        color: 'orange',
+        color: '#0D6EFD',
         borderBottomWidth: 1,
-        borderBottomColor: 'orange',
+        borderBottomColor: 'black',
         fontWeight: 'bold',
         marginLeft: 10,
     },
