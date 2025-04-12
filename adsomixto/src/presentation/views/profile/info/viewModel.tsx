@@ -70,21 +70,25 @@ const ProfileInfoViewModel = () => {
     const handleUpdateProduct = async () => {
         if (selectedProductId !== null) {
             console.log("usuario seleccionado:", selectedProductId);
-            const response = await updateProduct(selectedProductId, { nombre, correo, password, rol_id });
-            // const updatedProduct = {
-            //     nombre: response.nombre,
-            //     correo: response.correo,
-            //     password: response.password,
-            //     rol_id: response.rol_id
-            // };
-            // setProducts(products.map(product => product.id_documento === selectedProductId ? updatedProduct : product));
+            const updateData = {
+                nombre, 
+                correo,
+                rol_id,
+                ...(password.trim() && { password })
+            }
+
+            // if (password.trim() !== "") {
+            //     updateData.password = password;
+            // }
+            const response = await updateProduct(selectedProductId, updateData);
+
             const updatedProduct = products.map(product => {
                 if (product.id_documento === selectedProductId) {
                     return {
                         ...product,
                         nombre: response.nombre,
                         correo_electronico: response.correo,
-                        password: response.password,
+                        // password: response.password,
                         rol_id: response.rol_id
                     };
                 }

@@ -1,5 +1,5 @@
 export interface User {
-    id_documento?: string
+    id?: string
     nombre: string;
     apellido: string;
     telefono: string;

@@ -74,7 +74,7 @@ export const ProfileInfoScreen = ({ navigation, route }: Props) => {
                                 <TouchableOpacity style={styles.button} onPress={() => {
                                     setNombre(item.nombre);
                                     setCorreo(item.correo_electronico);
-                                    setPassword(item.contraseña);
+                                    setPassword("");
                                     setRol(item.rol_id.toString());
                                     setSelectedProductId(item.id_documento);
                                 }}>
@@ -129,7 +129,7 @@ export const ProfileInfoScreen = ({ navigation, route }: Props) => {
             />
             <TextInput
                 style={styles.input}
-                placeholder="contraseña"
+                placeholder="nueva contraseña"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry={true}
